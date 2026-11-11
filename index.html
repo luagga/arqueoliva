@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica de caracteres y adaptación a móviles -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>ARQUEOLIVA</title>
+    
+    <!-- Conectamos este HTML con nuestro archivo de diseño CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= BARRA DE NAVEGACIÓN (MENÚ SUPERIOR) ================= -->
+    <header class="navbar">
+        <div class="logo-container">
+            <!-- Aquí irá tu imagen de logo. De momento ponemos un icono de texto -->
+            <img src="assets/logo.png" alt="Logo ARQUEOLIVA" class="logo-img" onerror="this.style.display='none'">
+            <span class="nombre-empresa">ARQUEOLIVA</span>
+        </div>
+
+        <!-- Enlaces que llevan a cada parte de la misma página -->
+        <nav class="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+            <!-- Botón destacado en el menú -->
+            <a href="#contacto" class="btn-presupuesto-nav">Solicitar Presupuesto</a>
+        </nav>
+    </header>
+
+    <!-- ================= PORTADA PRINCIPAL (HERO) ================= -->
+    <section id="inicio" class="portada">
+        <div class="portada-contenido">
+            <h1>Con nosotros, el pasado y el futuro son compatibles</h1>
+            <p>Actividades arqueológicas preventivas y de urgencia. Servicios profesionales de arqueología.</p>
+            
+            <!-- Botones principales de acción -->
+            <div class="portada-botones">
+                <a href="#contacto" class="btn-primario">Solicitar Presupuesto</a>
+                <!-- El atributo 'download' fuerza la descarga del archivo PDF -->
+                <a href="assets/dossier-corporativo.pdf" download class="btn-secundario">Descargar Dossier PDF</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECCIÓN DE SERVICIOS ================= -->
+    <section id="servicios" class="servicios">
+        <h2>Nuestros Servicios</h2>
+        <p class="subtitulo">Actividades arqueológicas que cumplen con el Reglamento de Actividades Arqueológicas de Andalucía.</p>
+
+        <div class="servicios-grid">
+            <!-- Tarjeta de Servicio 1 -->
+            <article class="tarjeta-servicio">
+                <h3>Excavación arqueológica</h3>
+                <p>Excavación arqueológica extensiva, sondeos arqueológicos, control arqueológicos de movimientos de tierra y análisis arqueológico de estructuras emergentes.</p>
+            </article>
+
+            <!-- Tarjeta de Servicio 2 -->
+            <article class="tarjeta-servicio">
+                <h3>Prospecciones arqueológicas</h3>
+                <p>Investigación y detección de vestigios arqueológicos o paleontológicos.</p>
+            </article>
+
+            <!-- Tarjeta de Servicio 3 -->
+            <article class="tarjeta-servicio">
+                <h3>Labores de consolidación, restauración y restitución arqueológicas</h3>
+            </article>
+
+            <!-- Tarjeta de Servicio 4 -->
+            <article class="tarjeta-servicio">
+                <h3>Actuaciones arqueológicas de cerramiento, vallado y cubrición</h3>
+            </article>
+
+            <!-- Tarjeta de Servicio 5 -->
+            <article class="tarjeta-servicio">
+                <h3>Estudio y documentación gráfica de yacimientos arqueológicos, así como de materiales arqueológicos</h3>
+            </article>
+
+            <!-- Tarjeta de Servicio 6 -->
+            <article class="tarjeta-servicio">
+                <h3>Reproducción y estudio directo de arte rupestre</h3>
+            </article>
+        </div>
+    </section>
+
+    <!-- ================= SECCIÓN DE CONTACTO ================= -->
+    <section id="contacto" class="contacto">
+        <h2>Contacta con Nosotros</h2>
+        <p class="subtitulo">Te enviaremos un presupuesto sin compromiso en menos de 24 horas.</p>
+
+                <form id="formulario-contacto" class="formulario">
+            <label for="nombre">Nombre o Empresa</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Constructora Sur S.L." required>
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+
+            <label for="mensaje">Detalles del proyecto o ubicación</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe brevemente la obra o consulta..." required></textarea>
+
+            <!-- Campo oculto para personalizar el asunto del correo que recibirás -->
+            <input type="hidden" name="_subject" value="Nueva solicitud de presupuesto - ARQUEOLIVA">
+            <!-- Desactiva el captcha visual para que sea más rápido -->
+            <input type="hidden" name="_captcha" value="false">
+
+            <button type="submit" id="btn-enviar" class="btn-primario">Enviar Solicitud de Presupuesto</button>
+
+            <!-- Aquí aparecerá el mensaje de confirmación en la propia web -->
+            <p id="mensaje-estado" class="mensaje-estado"></p>
+        </form>
+
+    </section>
+
+    <!-- ================= PIE DE PÁGINA (FOOTER) ================= -->
+    <footer class="footer">
+        <p>&copy; 2026 Arqueoliva. Todos los derechos reservados.</p>
+        <p>Teléfono: +34 676 203 480 | Email: aguileragarcialuy@gmail.com</p>
+    </footer>
+
+    <!-- Conectamos el archivo de interactividad JavaScript al final -->
+    <script src="script.js"></script>
+</body>
+</html>
