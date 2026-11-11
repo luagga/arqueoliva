@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // ==============================================================
-    // PON AQUÍ TU CORREO ENTRE LAS COMILLAS SIMPLES:
+    // TU CORREO DE DESTINO:
     const miCorreo = 'aguileragarcialuy@gmail.com';
     // ==============================================================
 
