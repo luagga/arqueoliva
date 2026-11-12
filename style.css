@@ -1,0 +1,409 @@
+/* ================= VARIABLES DE COLOR Y TIPOGRAFÍA ================= */
+/* Aquí guardamos los colores tierra para reutilizarlos fácilmente */
+:root {
+    --color-fondo: #F7F4EF;         /* Blanco hueso / Arena muy clara */
+    --color-fondo-alt: #EFECE6;     /* Piedra caliza suave */
+    --color-terracota: #9C523B;     /* Barro cocido / Arcilla (Botones principales) */
+    --color-terracota-oscuro: #7D3F2C; /* Terracota al pasar el ratón */
+    --color-oliva: #55624C;         /* Verde oliva apagado (Detalles) */
+    --color-texto: #2C2623;         /* Marrón muy oscuro (Texto principal) */
+    --color-texto-suave: #5E554F;   /* Marrón grisáceo (Subtítulos) */
+    --color-borde: #DCD5C9;         /* Línea sutil color arena */
+}
+
+/* ================= CONFIGURACIÓN GENERAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Evita que los rellenos deformen las cajas */
+}
+
+html {
+    scroll-behavior: smooth; /* Hace que al pulsar el menú baje suavemente */
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* ================= BARRA DE NAVEGACIÓN (MENÚ) ================= */
+.navbar {
+    display: flex; /* Pone el logo a la izquierda y el menú a la derecha */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 8%;
+    background-color: var(--color-fondo);
+    border-bottom: 1px solid var(--color-borde);
+    position: sticky; /* Mantiene el menú fijo arriba al bajar */
+    top: 0;
+    z-index: 100;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 80px;
+    width: auto;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+.nombre-empresa {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--color-oliva);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: var(--color-terracota);
+}
+
+/* Botón destacado dentro del menú */
+.menu .btn-presupuesto-nav {
+    background-color: var(--color-oliva);
+    color: #FFFFFF;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+}
+
+.menu .btn-presupuesto-nav:hover {
+    background-color: #414C3A;
+    color: #FFFFFF;
+}
+
+/* ================= PORTADA PRINCIPAL (HERO) ================= */
+.portada {
+    padding: 6rem 8%;
+    text-align: center;
+    background: linear-gradient(to bottom, var(--color-fondo-alt), var(--color-fondo));
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.portada-contenido {
+    max-width: 800px;
+    margin: 0 auto; /* Centra el bloque en la pantalla */
+}
+
+.portada h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+    color: var(--color-texto);
+    font-weight: 700;
+}
+
+.portada p {
+    font-size: 1.15rem;
+    color: var(--color-texto-suave);
+    margin-bottom: 2.2rem;
+}
+
+.portada-botones {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Si la pantalla es pequeña, un botón baja debajo del otro */
+}
+
+/* Estilo de los dos botones principales */
+.btn-primario, .btn-secundario {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid var(--color-terracota);
+}
+
+.btn-primario {
+    background-color: var(--color-terracota);
+    color: #FFFFFF;
+}
+
+.btn-primario:hover {
+    background-color: var(--color-terracota-oscuro);
+    border-color: var(--color-terracota-oscuro);
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: var(--color-terracota);
+}
+
+.btn-secundario:hover {
+    background-color: var(--color-terracota);
+    color: #FFFFFF;
+}
+
+/* ================= SECCIÓN DE SERVICIOS ================= */
+.servicios {
+    padding: 5rem 8%;
+    text-align: center;
+}
+
+.servicios h2, .contacto h2 {
+    font-size: 2.1rem;
+    margin-bottom: 0.8rem;
+    color: var(--color-texto);
+}
+
+.subtitulo {
+    color: var(--color-texto-suave);
+    max-width: 650px;
+    margin: 0 auto 3.5rem auto;
+    font-size: 1.05rem;
+}
+
+/* Cuadrícula automática para tus 6 tarjetas */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    text-align: left;
+}
+
+.tarjeta-servicio {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 6px;
+    border: 1px solid var(--color-borde);
+    border-top: 4px solid var(--color-oliva); /* Detalle superior en verde oliva */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-5px); /* Eleva ligeramente la tarjeta al pasar el ratón */
+    box-shadow: 0 10px 20px rgba(44, 38, 35, 0.08);
+    border-top-color: var(--color-terracota); /* Cambia a terracota al señalarla */
+}
+
+.tarjeta-servicio h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--color-texto);
+}
+
+.tarjeta-servicio p {
+    color: var(--color-texto-suave);
+    font-size: 0.95rem;
+}
+
+/* ================= SECCIÓN DE PRESUPUESTO (FORMULARIO) ================= */
+.contacto {
+    padding: 5rem 8%;
+    background-color: var(--color-fondo-alt);
+    text-align: center;
+    border-top: 1px solid var(--color-borde);
+}
+
+.formulario {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #FFFFFF;
+    padding: 2.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--color-borde);
+}
+
+.formulario label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-texto);
+}
+
+.formulario input, .formulario textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--color-borde);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: var(--color-fondo);
+}
+
+.formulario input:focus, .formulario textarea:focus {
+    outline: none;
+    border-color: var(--color-terracota);
+    background-color: #FFFFFF;
+}
+
+.formulario button {
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+/* ================= SECCIÓN DE CONTACTO DIRECTO ================= */
+.datos-contacto {
+    padding: 5rem 8%;
+    background-color: var(--color-fondo);
+    text-align: center;
+    border-top: 1px solid var(--color-borde);
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    max-width: 960px;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+.contacto-item {
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 2.2rem 1.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--color-borde);
+    border-bottom: 4px solid var(--color-terracota);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(44, 38, 35, 0.07);
+}
+
+.contacto-icono {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: var(--color-fondo-alt);
+    color: var(--color-terracota);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.contacto-item h3 {
+    font-size: 1.15rem;
+    color: var(--color-oliva);
+    margin-bottom: 0.6rem;
+}
+
+.contacto-item a {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: color 0.3s ease;
+}
+
+.contacto-item a:hover {
+    color: var(--color-terracota);
+}
+
+.redes-enlaces {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.redes-enlaces a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.95rem;
+}
+
+/* ================= PIE DE PÁGINA (FOOTER) ================= */
+.footer {
+    background-color: var(--color-texto);
+    color: var(--color-fondo-alt);
+    text-align: center;
+    padding: 2.5rem 8%;
+    font-size: 0.9rem;
+}
+
+.footer p {
+    margin-bottom: 0.4rem;
+}
+
+/* ================= ADAPTACIÓN A MÓVILES (RESPONSIVE) ================= */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 1rem 5%;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .portada {
+        padding: 4rem 5%;
+    }
+
+    .portada h1 {
+        font-size: 2rem;
+    }
+
+    .formulario {
+        padding: 1.5rem;
+    }
+}
+
+/* ================= MENSAJE DE CONFIRMACIÓN DEL FORMULARIO ================= */
+.mensaje-estado {
+    margin-top: 1rem;
+    font-weight: 600;
+    text-align: center;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.mensaje-estado.exito {
+    padding: 0.8rem;
+    background-color: #E8EFE6;
+    color: var(--color-oliva);
+    border: 1px solid var(--color-oliva);
+}
+
+.mensaje-estado.error {
+    padding: 0.8rem;
+    background-color: #F9E6E2;
+    color: var(--color-terracota-oscuro);
+    border: 1px solid var(--color-terracota);
+}

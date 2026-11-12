@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración básica de caracteres y adaptación a móviles -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>ARQUEOLIVA</title>
+    
+    <!-- Conectamos este HTML con nuestro archivo de diseño CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= BARRA DE NAVEGACIÓN (MENÚ SUPERIOR) ================= -->
+    <header class="navbar">
+        <div class="logo-container">
+            <!-- Aquí irá tu imagen de logo. De momento ponemos un icono de texto -->
+            <img src="assets/logo.png" alt="Logo ARQUEOLIVA" class="logo-img" onerror="this.style.display='none'">
+            <span class="nombre-empresa">ARQUEOLIVA</span>
+        </div>
+
+        <!-- Enlaces que llevan a cada parte de la misma página -->
+        <nav class="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- ================= PORTADA PRINCIPAL (HERO) ================= -->
+    <section id="inicio" class="portada">
+        <div class="portada-contenido">
+            <h1>Con nosotros, el pasado y el futuro son compatibles</h1>
+            <p>Actividades arqueológicas preventivas y de urgencia. Servicios profesionales de arqueología.</p>
+            
+            <!-- Botones principales de acción -->
+            <div class="portada-botones">
+                <a href="#presupuesto" class="btn-primario">Solicitar Presupuesto</a>
+                <!-- El atributo 'download' fuerza la descarga del archivo PDF -->
+                <a href="assets/dossier-corporativo.pdf" download class="btn-secundario">Descargar Dossier PDF</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECCIÓN DE SERVICIOS ================= -->
+    <section id="servicios" class="servicios">
+        <h2>Nuestros Servicios</h2>
+        <p class="subtitulo">Actividades arqueológicas que cumplen con el Reglamento de Actividades Arqueológicas de Andalucía.</p>
+
+        <div class="servicios-grid">
+            <!-- Tarjeta de Servicio 1 -->
+            <article class="tarjeta-servicio">
+                <h3>Excavación arqueológica</h3>
+                <p>Excavación arqueológica extensiva, sondeos arqueológicos, control arqueológicos de movimientos de tierra y análisis arqueológico de estructuras emergentes.</p>
+            </article>
+
+            <!-- Tarjeta de Servicio 2 -->
+            <article class="tarjeta-servicio">
+                <h3>Prospecciones arqueológicas</h3>
+                <p>Investigación y detección de vestigios arqueológicos o paleontológicos.</p>
+            </article>
+
+            <!-- Tarjeta de Servicio 3 -->
+            <article class="tarjeta-servicio">
+                <h3>Labores de consolidación, restauración y restitución arqueológicas</h3>
+            </article>
+
+            <!-- Tarjeta de Servicio 4 -->
+            <article class="tarjeta-servicio">
+                <h3>Actuaciones arqueológicas de cerramiento, vallado y cubrición</h3>
+            </article>
+
+            <!-- Tarjeta de Servicio 5 -->
+            <article class="tarjeta-servicio">
+                <h3>Estudio y documentación gráfica de yacimientos arqueológicos, así como de materiales arqueológicos</h3>
+            </article>
+
+            <!-- Tarjeta de Servicio 6 -->
+            <article class="tarjeta-servicio">
+                <h3>Reproducción y estudio directo de arte rupestre</h3>
+            </article>
+        </div>
+    </section>
+
+     <!-- ================= SECCIÓN DE PRESUPUESTO (FORMULARIO) ================= -->
+    <section id="presupuesto" class="contacto">
+        <h2>Solicita tu Presupuesto</h2>
+        <p class="subtitulo">Cuéntanos tu proyecto y te enviaremos una valoración sin compromiso en menos de 24 horas.</p>
+
+        <form id="formulario-contacto" class="formulario">
+            <label for="nombre">Nombre o Empresa</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Constructora Sur S.L." required>
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+
+            <label for="mensaje">Detalles del proyecto o ubicación</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe brevemente la obra o consulta..." required></textarea>
+
+            <input type="hidden" name="_subject" value="Nueva solicitud de presupuesto - ARQUEOLIVA">
+            <input type="hidden" name="_captcha" value="false">
+
+            <button type="submit" id="btn-enviar" class="btn-primario">Enviar Solicitud de Presupuesto</button>
+
+            <p id="mensaje-estado" class="mensaje-estado"></p>
+        </form>
+    </section>
+
+        <!-- ================= SECCIÓN DE CONTACTO DIRECTO ================= -->
+    <section id="contacto" class="datos-contacto">
+        <h2>Contacto Directo</h2>
+        <p class="subtitulo">¿Prefieres hablar directamente con nosotros? Estamos a tu disposición por teléfono, correo o redes sociales.</p>
+
+        <div class="contacto-grid">
+            <!-- Tarjeta Teléfono -->
+            <div class="contacto-item">
+                <div class="contacto-icono">
+                    <!-- Icono Teléfono -->
+                    <svg xmlns="http://w3.org" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <h3>Teléfono / WhatsApp</h3>
+                <p><a href="tel:+34676203480">+34 676 203 480</a></p>
+            </div>
+
+            <!-- Tarjeta Correo -->
+            <div class="contacto-item">
+                <div class="contacto-icono">
+                    <!-- Icono Correo -->
+                    <svg xmlns="http://w3.org" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+                </div>
+                <h3>Correo Electrónico</h3>
+                <p><a href="mailto:arqueoliva@gmail.com">arqueoliva@gmail.com</a></p>
+            </div>
+
+            <!-- Tarjeta Redes Sociales -->
+            <div class="contacto-item">
+                <div class="contacto-icono">
+                    <!-- Icono Compartir / Redes -->
+                    <svg xmlns="http://w3.org" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line></svg>
+                </div>
+                <h3>Redes Sociales</h3>
+                <div class="redes-enlaces">
+                    <a href="#" target="_blank" aria-label="Facebook" title="Facebook">
+                        <svg xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        <span>Facebook</span>
+                    </a>
+
+                    <a href="#" target="_blank" aria-label="Instagram" title="Instagram">
+                        <svg xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="#" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+                        <svg xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= PIE DE PÁGINA (FOOTER) ================= -->
+    <footer class="footer">
+        <p>&copy; 2026 Arqueoliva. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Conectamos el archivo de interactividad JavaScript al final -->
+    <script src="script.js"></script>
+</body>
+</html>
